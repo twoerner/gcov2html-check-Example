@@ -1,0 +1,5 @@
+gcov2html-check Example
+April 6, 2011
+
+This project demonstrates how to use make use of the
+gcov2html-check functionality in a C project.
