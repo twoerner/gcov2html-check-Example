@@ -7,7 +7,7 @@ AC_CONFIG_MACRO_DIR([m4])
 AM_INIT_AUTOMAKE([foreign no-dist-gzip dist-bzip2 1.9])
 AM_CONFIG_HEADER(cfg/config.h)
 
-SUBDIRS="lib"
+SUBDIRS="src lib"
 
 dnl **********************************
 dnl checks for programs
@@ -88,5 +88,6 @@ dnl output
 dnl **********************************
 AC_OUTPUT(Makefile
 cfg/Makefile
+src/Makefile
 lib/Makefile
 tests/Makefile)
