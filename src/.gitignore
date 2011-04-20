@@ -1,1 +1,4 @@
 bsort
+*gcda
+*gcno
+*gcov
