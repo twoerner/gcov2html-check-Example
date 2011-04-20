@@ -4,4 +4,4 @@ CFLAGS = -fprofile-arcs -ftest-coverage
 
 all: $(ALL)
 clean::
-	$(RM) $(ALL)
+	$(RM) $(ALL) *gcda *gcno *gcov *html
