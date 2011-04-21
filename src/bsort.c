@@ -52,11 +52,10 @@ bsort (int arr[], unsigned sz)
 {
 	unsigned i, j;
 	int tmp;
-	bool swaps;
+	bool swaps = false;
 	unsigned swapCnt = 0;
 
 	for (i=(sz-1); i>0; --i) {
-		swaps = false;
 		for (j=0; j<i; ++j) {
 			if (arr[j] > arr[j+1]) {
 				swaps = true;
