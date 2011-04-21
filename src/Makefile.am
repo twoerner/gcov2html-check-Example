@@ -10,4 +10,4 @@ gcov_bsort_SOURCES = bsort.c
 gcov_bsort_CFLAGS = -fprofile-arcs -ftest-coverage
 
 clean-local:
-	$(RM) *gcno *gcda
+	$(RM) *gcno *gcda *gcov *html
