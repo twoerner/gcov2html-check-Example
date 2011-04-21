@@ -44,7 +44,7 @@ randomize (int arr[], unsigned sz)
 	srand ((unsigned int)now);
 
 	for (i=0; i<sz; ++i)
-		arr[i] = rand () % sz;
+		arr[i] = rand () % (int)sz;
 }
 
 static unsigned
