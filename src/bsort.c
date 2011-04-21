@@ -6,15 +6,16 @@
 #include <stdbool.h>
 #include <stdlib.h>
 #include <time.h>
+#include "bsort.h"
 
-#define ARRSZ 32
-
-static void randomize (int arr[], unsigned sz);
-static unsigned bsort (int arr[], unsigned sz);
-static void print_array (int arr[], unsigned sz);
+#ifdef UNDER_TEST
+# define static
+#else
+# define static static
+#endif // UNDER_TEST
 
 int
-main (void)
+bsort_main (void)
 {
 	int arr[ARRSZ];
 	unsigned swaps;
