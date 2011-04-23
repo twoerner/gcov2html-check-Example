@@ -13,8 +13,8 @@
 
 #define ARRSZ 32
 
-static void randomize (int arr[], unsigned sz);
-static unsigned bsort (int arr[], unsigned sz);
-static void print_array (int arr[], unsigned sz);
+static void randomize (int arr[], size_t sz);
+static unsigned bsort (int arr[], size_t sz);
+static void print_array (int arr[], size_t sz);
 
 #endif // BSORT__H

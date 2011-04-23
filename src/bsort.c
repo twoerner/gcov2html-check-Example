@@ -36,10 +36,10 @@ bsort_main (void)
 }
 
 static void
-randomize (int arr[], unsigned sz)
+randomize (int arr[], size_t sz)
 {
 	time_t now;
-	unsigned i;
+	size_t i;
 
 	now = time (NULL);
 	srand ((unsigned int)now);
@@ -49,9 +49,9 @@ randomize (int arr[], unsigned sz)
 }
 
 static unsigned
-bsort (int arr[], unsigned sz)
+bsort (int arr[], size_t sz)
 {
-	unsigned i, j;
+	size_t i, j;
 	int tmp;
 	bool swaps = false;
 	unsigned swapCnt = 0;
@@ -74,9 +74,9 @@ bsort (int arr[], unsigned sz)
 }
 
 static void
-print_array (int arr[], unsigned sz)
+print_array (int arr[], size_t sz)
 {
-	unsigned i;
+	size_t i;
 
 	printf ("(");
 	for (i=0; i<sz; ++i) {
