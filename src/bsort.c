@@ -51,26 +51,26 @@ randomize (int arr[], size_t sz)
 static unsigned
 bsort (int arr[], size_t sz)
 {
-	size_t i, j;
+	size_t unsortEnd, i;
 	int tmp;
 	unsigned swapCnt = 0;
 	size_t lastSwap;
 
-	for (i=(sz-1); i>0; --i) {
+	for (unsortEnd=(sz-1); unsortEnd>0; --unsortEnd) {
 		lastSwap = 0;
-		for (j=0; j<i; ++j) {
-			if (arr[j] > arr[j+1]) {
+		for (i=0; i<unsortEnd; ++i) {
+			if (arr[i] > arr[i+1]) {
 				++swapCnt;
-				lastSwap = j + 1;
+				lastSwap = i + 1;
 
-				tmp = arr[j];
-				arr[j] = arr[j+1];
-				arr[j+1] = tmp;
+				tmp = arr[i];
+				arr[i] = arr[i+1];
+				arr[i+1] = tmp;
 			}
 		}
 		if (lastSwap == 0)
 			break;
-		i = lastSwap;
+		unsortEnd = lastSwap;
 	}
 
 	return swapCnt;
