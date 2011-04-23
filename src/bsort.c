@@ -53,21 +53,24 @@ bsort (int arr[], size_t sz)
 {
 	size_t i, j;
 	int tmp;
-	bool swaps = false;
 	unsigned swapCnt = 0;
+	size_t lastSwap;
 
 	for (i=(sz-1); i>0; --i) {
+		lastSwap = 0;
 		for (j=0; j<i; ++j) {
 			if (arr[j] > arr[j+1]) {
-				swaps = true;
 				++swapCnt;
+				lastSwap = j + 1;
+
 				tmp = arr[j];
 				arr[j] = arr[j+1];
 				arr[j+1] = tmp;
 			}
 		}
-		if (!swaps)
+		if (lastSwap == 0)
 			break;
+		i = lastSwap;
 	}
 
 	return swapCnt;
