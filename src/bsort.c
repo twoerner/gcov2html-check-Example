@@ -17,7 +17,7 @@
 int
 bsort_main (void)
 {
-	int arr[ARRSZ];
+	static int arr[ARRSZ];
 	unsigned swaps;
 
 	randomize (arr, ARRSZ);
